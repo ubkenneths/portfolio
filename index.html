@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio - Kenneth Santarosa</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+</head>
+  <body>
+    <div class="App">
+      <div class="navbar blue">
+        <span id="about">About</span>
+        <span id="experience">Experience</span>
+        <span id="projects">Projects</span>
+        <span id="contact">Contact</span>
+        <a href="http://ksantarosa-portfolio-research.surge.sh/">Research</a>        
+      </div>
+
+      <section class="about" ref="about">
+        <div class="about-description">
+            <h1>About Me</h1>
+            Hey, my name is Kenneth Santarosa and I am currently a 3rd year informatics student 
+            at the Univeristy of California Irvine. My career goal is to become a full-stack web
+            developer in a professional setting. Currently I am a intern at The Portal
+            where along with other students, I am helping to develop web applications for real 
+            clients.
+            I am relatively new to the field, but with the work that I have done outside of school
+            I feel confident and qualified to create both static websites and web applications.
+            On my spare time, when I am not coding I like to go the movies, play basketball,
+            make music and play instruments, and go out with family and friends.
+          </div>
+        <div class="about-portfolio-picture">
+          <img src="./images/FullSizeRender.jpg" alt="Kenneth Santarosa" class="img-view-icon"/>            
+        </div>
+      </section>
+
+      <section class="experience blue-light">
+        <h1>Experience</h1>
+        <div class="work">
+          <h2>Past</h2>
+          <div>
+            My first real web develpement work experience took place in Level 2 designs. 
+            Level 2 designs is a company in Katella which offers IT solutions and web development.
+            My experience at Level 2 designs was working with platforms such as Wordpress and Shopify.
+            Often my tasks were to make changes to exsisting code or add completely new sections.
+            HTML, CSS, and responsive design were the technologies I learned while working there.
+          </div>
+        </div>
+        <div class="work">
+          <h2>Current</h2>
+          <div>
+            The Portal is were I am currently working at. The Portal's training program
+            taught me how to use javascript front-end libraries like jquery and the use of
+            AJAX. We also used node, express, mongoose, and mongoDB for the backend side of training.
+            The three weeks of training revolved around recreating the website Trello as practice for both
+            front-end and back-end development work. Currently I am on the portal's team helping
+            to develop web application using reactjs for clients and company internal projects. 
+          </div>
+        </div>
+        <div class="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>html5</li>
+            <li>css3</li>
+            <li>es6</li>
+            <li>jquery</li>
+            <li>reactjs</li>
+            <li>redux</li>
+            <li>express</li>
+            <li>mongodb</li>
+            <li>postgresql</li>
+            <li>github</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="projects blue-secondary">
+        <h1>Projects: Prello</h1>
+        <a target="_blank" href="https://github.com/ksantaro/prello"><img src="./images/github-logo-icon-30.png" alt="github icon" class="github-icon"/></a>
+        <p>
+          During training at the portal, I was tasked to recreate a smaller scale
+          version of the website Trello under the project name Prello. Prello was the
+          project that taught me a lot of the fundamental skills as a programmer including
+          traversing and manipulating the DOM using javascript, using jquery to make ajax
+          calls to our local server, creating session cookies, using socketio, using nodejs, 
+          setting up the backend and routing with express, setting up mongodb on our local machines, 
+          and setting up the models for mongodb using moongoose.
+        </p>
+          <h3 id="login" >Login Page <span class="triangle-down"/></h3>
+          <div id="login-content" class="project-section hide">
+            <div>
+              <img src="./images/login.png" alt="login image" class="img-view-icon"/>
+              <p>
+                The sign forms use <strong>authentication</strong> in order to make sure a user inputs a
+                a valid email address, and that both passwords match. Creating an account also
+                <strong>decrypt's</strong> the users password in order to make sure backend admins cannot view
+                their passwords as well as any potential hackers. The login form checks to see if
+                the user exsits and if they do, creates a <strong>sessions cookie</strong> which allows the user
+                to use the website. If a user tries to view a page without logging in first,
+                the user is <strong>redirected</strong> back to the login page. Finally, the login page has a 
+                forgot password icon that lets users change their password if they forgot their 
+                password.
+              </p>
+            </div>
+            <div>
+              <img src="./images/forgot-password.png" alt="forgot password image" class="img-view-icon"/>
+              <p>
+                A user who may have forgotten their password can use the forgot password link
+                to reset their password. The link will send an email to the user with a <strong>temporary 
+                website route</strong> that lets the user change thier password. After changing their password
+                or clicking forget password again, the temporary route expires.
+              </p>
+            </div>
+            <div>
+              <img src="./images/reset-password.png" alt="reset password image" class="img-view-icon"/>              
+              <p>
+                Reset password is a form field which will allow the user to change their password
+                for their respective email. Once the form is submitted the page redirects the user
+                back to the login screen and removes the reset password link from the database.
+              </p>
+            </div>
+            <span id="login" class="triangle-down flip-vertical toggle-dropdown"/>
+          </div>
+          <h3 id="boards">Boards Page <span class="triangle-down"/></h3>          
+          <div id="boards-content" class="project-section hide">
+            <div>
+              <img src="./images/boards.png" alt="boards image" class="img-view-icon"/>
+              <p>
+                The boards page can be seen as the dashboard page for the website. The boards page
+                is used to keep track of different projects in the shape of "boards" with basically 
+                to do lists. In the boards page, a user can add boards, see the boards they own, 
+                and access other boards they have been added to.
+              </p>
+            </div>
+            <div>
+              <img src="./images/boards-shared-with-me.png" alt="boards shared with me image" class="img-view-icon"/>              
+              <p>
+                Boards can be shared with other users they wish to collaberate with. When a user
+                adds another user to their individual board, the other user will then see the 
+                board under shared boards. In the database I have a <strong>permissions</strong> field which
+                contains all the other boards a user can view. If a user tries to view a board
+                they are not invited to, they are redirected back to their dashboard.
+              </p>
+            </div>
+            <div>
+              <img src="./images/boards-dropdown.png" alt="boards dropdown image" class="img-view-icon"/>              
+              <p>
+                In the navigation bar, the boards button lets users view all their boards and any
+                boards that have been shared with them. The boards button is located on both the
+                boards page and the individual boards pages themselves like in the picture. The
+                navigation bar was made through <strong>ejs</strong>, an html templeting framework to prevent reusing
+                the same code over and over.
+              </p>
+            </div>
+            <span id="boards" class="triangle-down flip-vertical toggle-dropdown"/>            
+          </div>
+          <h3 id="board">Board Page <span class="triangle-down"/></h3>          
+          <div id="board-content" class="project-section hide">
+            <div>
+              <img src="./images/board.png" alt="board image" class="img-view-icon"/>              
+              <p>
+                The board page contains an id in the url in order to <strong>route</strong> the specific board
+                the user wants to access. In the previouse page, each board button contains an id
+                which is then put in the url of the board page. Using the id, the board page
+                then renders all the different lists and cards that belong to that board. In the
+                board page a user can add a list, change the list title, delete a list, add a card,
+                and delete a card. This, along with the cards, was the bulk of the project where
+                I had to learn how to be able to <strong>GET, PUSH, DELETE, and PATCH</strong> objects in the database 
+                and after retrieving the information, <strong>rendering the objects in html and css</strong>.
+              </p>
+            </div>
+            <div>
+              <img src="./images/menu.png" alt="menu image" class="img-view-icon"/>
+              <p>
+                On the right side of the page, the menu button would display a dropwdown
+                with options. The only option I implemented in my version of prello was to
+                allow users to add other users to their board.
+              </p>
+            </div>
+            <div>
+              <img src="./images/add-user-to-board.png" alt="add user to board image" class="img-view-icon"/>              
+              <p>
+                The "add users to board modal" allows users to add other users by email. If
+                the email does not exsist the user is promted with an <strong>error message</strong> of the
+                user does not exsist or the user is already a part of the board. The user
+                who is added will then be able to view the boards that were shared with them.
+                At the bottom of the card modal a user is able to delete the card once it is
+                finished or no longer needed.
+              </p>
+            </div>
+            <span id="board" class="triangle-down flip-vertical toggle-dropdown"/>            
+          </div>
+          <h3 id="card">Card Modal <span class="triangle-down"/></h3>
+          
+          <div id="card-content" class="project-section hide">
+            <div>
+              <img src="./images/modal-title.png" alt="modal title image" class="img-view-icon"/>              
+              <p>
+                The card modal lets the user edit the individual cards within the different
+                lists they have created. The user can edit the title by clicking on it and
+                changing the text. The user can assign members to the card by clicking on the
+                + button. The user can also remove members from the members list by hovering
+                over a member and clicking them. The description can be edited by clicking on
+                the edit button. After they finishing editing the description of the card the
+                user can click save to save their new description.
+              </p>
+            </div>
+            <div>
+              <img src="./images/modal-labels.png" alt="modal labels image" class="img-view-icon"/>
+              <p>
+                The card modal also contains labels. Labels work similar to memebers as a
+                user can add a label to the project by clicking the + sign and then be able
+                to remove the label by hovering over the individual label and clicking it.
+                The modal also allows users to add a comment to the card.
+              </p>
+            </div>
+            <div>
+              <img src="./images/modal-comments.png" alt="modal comments image" class="img-view-icon"/>
+              <p>
+                A card can contain any number of comments. Comments within the card modal
+                consist of an author, the comment itself, date, and a delete comment button.
+                The comments are displayed in order of the date they were created. The author
+                tag shows which user made the comment. Delete comment lets users delete a
+                comment from the database.
+              </p>
+            </div>
+            <span id="card" class="triangle-down flip-vertical toggle-dropdown"/>            
+          </div>
+      </section>
+      <section class="contact blue-dark">
+        <h1>Contact</h1>
+        <p>
+          Thank you for viewing my portfolio.<br /><br />
+          You may reach me using the following email. Hope to work with you soon.
+        </p>
+        <a href="mailto:ksantarosa47@gmail.com">ksantarosa47@gmail.com</a>
+      </section>
+    </div>
+  </body>
+  <script src="index.js"></script>  
+</html>
